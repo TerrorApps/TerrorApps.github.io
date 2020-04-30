@@ -1,0 +1,8 @@
+{
+  "name": "TerrorApps.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/TerrorApps/TerrorApps.github.io",
+  "author": "Rembrandt Reyes <reyes.rembrandt@gmail.com>",
+  "license": "MIT"
+}
