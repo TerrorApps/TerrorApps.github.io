@@ -4,31 +4,43 @@ const webpack = require("webpack");
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
+  output: {
+    filename: "./main.js",
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules)/,
-        loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader",
+        },
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
-      }
-    ]
-  },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
+        exclude: /(node_modules)/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        exclude: /(node_modules)/,
+        use: ["file-loader"],
+      },
+    ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
+    watchContentBase: true,
+    progress: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
 };
