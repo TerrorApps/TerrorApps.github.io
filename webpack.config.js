@@ -6,6 +6,7 @@ module.exports = {
   mode: "development",
   output: {
     filename: "./main.js",
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -37,7 +38,7 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    contentBase: path.join(__dirname, "build"),
     compress: true,
     port: 9000,
     watchContentBase: true,
