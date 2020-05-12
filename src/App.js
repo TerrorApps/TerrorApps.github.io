@@ -31,9 +31,9 @@ class App extends Component {
         },
       ],
       home: {
-        title: 'Relentless',
-        subTitle: 'Projects that make a difference',
-        description: 'See projects below',
+        title: 'Terror Apps',
+        subTitle: 'Awesome projects by awesome devs',
+        description: 'See awesome projects below',
       },
       about: {
         title: 'About Us',
