@@ -1,12 +1,12 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
+  entry: './src/index.js',
+  mode: 'development',
   output: {
-    filename: "./main.js",
-    path: path.resolve(__dirname, "build"),
+    filename: './main.js',
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
@@ -14,16 +14,16 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
         },
       },
       {
         test: /\.css$/,
-        exclude: /(node_modules)/,
+        // exclude: /(node_modules)/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
             },
@@ -33,12 +33,12 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         exclude: /(node_modules)/,
-        use: ["file-loader"],
+        use: ['file-loader'],
       },
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "build"),
+    contentBase: path.join(__dirname, 'build'),
     compress: true,
     port: 9000,
     watchContentBase: true,
