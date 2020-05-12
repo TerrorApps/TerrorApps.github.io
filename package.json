@@ -11,7 +11,7 @@
     "start": "webpack",
     "build": "webpack",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "yarn run build && echo 'terror.llc' > ./build/CNAME && gh-pages -b master -d build"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
