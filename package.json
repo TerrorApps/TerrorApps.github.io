@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/TerrorApps/TerrorApps.github.io",
-  "author": "Rembrandt Reyes <reyes.rembrandt@gmail.com>",
+  "author": "Aaron Southammavong <ae.southammavong@gmail.com>, Rembrandt Reyes <reyes.rembrandt@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server",
