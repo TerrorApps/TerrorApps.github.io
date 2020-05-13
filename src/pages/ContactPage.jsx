@@ -29,6 +29,15 @@ class ContactPage extends Component {
     });
   };
 
+  handleSubmit = (event) => {
+    event.preventDefault();
+
+    this.setState({
+      disabled: true, // edge case to not submit more than ONCE in same session
+      // emailSent: false, // testing post-email messages
+    });
+  };
+
   render() {
     return (
       <div>
