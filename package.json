@@ -20,6 +20,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
     "gh-pages": "^2.2.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
@@ -33,6 +34,8 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27",
+    "schema-utils": "^2.6.6"
   }
 }
