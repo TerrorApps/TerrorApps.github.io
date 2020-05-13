@@ -6,10 +6,11 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
+import Footer from './components/Footer.jsx';
 import HomePage from './pages/HomePage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
-import Footer from './components/Footer.jsx';
+import PrivacyPage from './pages/PrivacyPage.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -41,6 +42,9 @@ class App extends Component {
       contact: {
         title: 'Contact Us',
       },
+      privacy: {
+        title: 'Terror Apps',
+      },
     };
   }
 
@@ -61,6 +65,9 @@ class App extends Component {
                 </Link>
                 <Link className="nav-link" to="/contact">
                   Contact
+                </Link>
+                <Link className="nav-link" to="/privacy">
+                  Privacy
                 </Link>
               </Nav>
             </Navbar.Collapse>
@@ -86,6 +93,10 @@ class App extends Component {
           <Route
             path="/contact"
             render={() => <ContactPage title={this.state.contact.title} />}
+          />
+          <Route
+            path="/privacy"
+            render={() => <PrivacyPage title={this.state.privacy.title} />}
           />
 
           <Footer />
