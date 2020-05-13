@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,10 +10,12 @@ const Footer = () => {
       <Container fluid={true}>
         <Row className="border-top justify-content-between p-3">
           <Col className="p-0" md={3} sm={12}>
-            c.2020, Terror Apps
+            <Link className="nav-link" to="/privacy">
+              Privacy
+            </Link>
           </Col>
           <Col className="p-0 d-flex justify-content-end" md={3}>
-            This site was made by Aaron Southammavong
+            c.2020, Terror LLC
           </Col>
         </Row>
       </Container>
