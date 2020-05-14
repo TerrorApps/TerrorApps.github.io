@@ -1,3 +1,9 @@
+.aaron-fullscreen {
+  height: 100vh;
+  width: 100%;
+  /* background-color: aqua; */
+}
+
 .aaron-card {
   margin: 20px;
 }
@@ -22,4 +28,14 @@
 .aaron-card-subtitle {
   font-size: 16px;
   margin: 0px;
+}
+
+.success-msg {
+  color: #57a773;
+  padding: 10px 15px;
+}
+
+.error-msg {
+  color: #f7351b;
+  padding: 10px 15px;
 }

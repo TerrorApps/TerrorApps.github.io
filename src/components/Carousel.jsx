@@ -26,11 +26,19 @@ class Carousel extends Component {
           link: '',
           selected: false,
         },
+        {
+          id: 2,
+          title: 'A Third One',
+          subTitle: 'A Third app',
+          imgSrc: pokervault,
+          link: '',
+          selected: false,
+        },
       ],
     };
   }
 
-  handleCardClick(id, card) {
+  handleCardClick = (id, card) => {
     let items = [...this.state.items];
     items[id].selected = items[id].selected ? false : true;
 
@@ -43,9 +51,9 @@ class Carousel extends Component {
     this.setState({
       items,
     });
-  }
+  };
 
-  makeItems(items) {
+  makeItems = (items) => {
     return items.map((item) => {
       return (
         <Card
@@ -55,7 +63,7 @@ class Carousel extends Component {
         />
       );
     });
-  }
+  };
 
   render() {
     return (
