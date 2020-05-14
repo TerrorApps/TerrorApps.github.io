@@ -38,7 +38,7 @@ class Carousel extends Component {
     };
   }
 
-  handleCardClick(id, card) {
+  handleCardClick = (id, card) => {
     let items = [...this.state.items];
     items[id].selected = items[id].selected ? false : true;
 
@@ -51,9 +51,9 @@ class Carousel extends Component {
     this.setState({
       items,
     });
-  }
+  };
 
-  makeItems(items) {
+  makeItems = (items) => {
     return items.map((item) => {
       return (
         <Card
@@ -63,7 +63,7 @@ class Carousel extends Component {
         />
       );
     });
-  }
+  };
 
   render() {
     return (

@@ -15,11 +15,11 @@ const HomePage = (props) => {
           {/* <div className="align-items-end">hello</div> */}
         </div>
       </div>
-      <div className="aaron-fullscreen">
-        <div className="row h-100 justify-content-center align-items-center">
-          <Carousel />
-        </div>
+      {/* <div className="aaron-fullscreen"> */}
+      <div className="row h-100 justify-content-center align-items-center">
+        <Carousel />
       </div>
+      {/* </div> */}
     </div>
   );
 };
