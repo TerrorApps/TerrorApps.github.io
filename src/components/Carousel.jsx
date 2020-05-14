@@ -18,22 +18,6 @@ class Carousel extends Component {
           link: '',
           selected: false,
         },
-        {
-          id: 1,
-          title: 'Another One',
-          subTitle: 'Another app',
-          imgSrc: pokervault,
-          link: '',
-          selected: false,
-        },
-        {
-          id: 2,
-          title: 'A Third One',
-          subTitle: 'A Third app',
-          imgSrc: pokervault,
-          link: '',
-          selected: false,
-        },
       ],
     };
   }
