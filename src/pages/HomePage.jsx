@@ -6,7 +6,7 @@ const HomePage = (props) => {
   return (
     <div>
       <div className="aaron-fullscreen">
-        <div className="row h-100 justify-content-center align-items-center">
+        <div className="row mx-0 aaron-fullscreen justify-content-center align-items-center">
           <Hero
             title={props.title}
             subTitle={props.subTitle}
