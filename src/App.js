@@ -52,22 +52,26 @@ class App extends Component {
     return (
       <Router>
         <Container className="p-0" fluid={true}>
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Terror Apps</Navbar.Brand>
+          <Navbar expand="lg">
+            <Navbar.Brand>
+              <Link to="/">
+                <img
+                  src="https://res.cloudinary.com/rreyes/image/upload/v1588809670/terror_apps_logo_rprbvp.png"
+                  width="100px"
+                />
+              </Link>
+            </Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link text-white" to="/">
                   Home
                 </Link>
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link text-white" to="/about">
                   About
                 </Link>
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link text-white" to="/contact">
                   Contact
-                </Link>
-                <Link className="nav-link" to="/privacy">
-                  Privacy
                 </Link>
               </Nav>
             </Navbar.Collapse>
@@ -85,19 +89,10 @@ class App extends Component {
             )}
           />
 
-          <Route
-            path="/about"
-            render={() => <AboutPage title={this.state.about.title} />}
-          />
+          <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
 
-          <Route
-            path="/contact"
-            render={() => <ContactPage title={this.state.contact.title} />}
-          />
-          <Route
-            path="/privacy"
-            render={() => <PrivacyPage title={this.state.privacy.title} />}
-          />
+          <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
+          <Route path="/privacy" render={() => <PrivacyPage title={this.state.privacy.title} />} />
 
           <Footer />
         </Container>
