@@ -50,7 +50,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Container className="p-0" fluid={true}>
           <Navbar expand="lg">
             <Navbar.Brand>
