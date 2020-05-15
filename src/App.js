@@ -73,6 +73,7 @@ class App extends Component {
                 <Link className="nav-link text-white" to="/contact">
                   Contact
                 </Link>
+                <Link to="/privacy" />
               </Nav>
             </Navbar.Collapse>
           </Navbar>
