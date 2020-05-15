@@ -1,49 +1,49 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import 'bootstrap/dist/css/bootstrap.css';
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
-import Footer from './components/Footer.jsx';
-import HomePage from './pages/HomePage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import PrivacyPage from './pages/PrivacyPage.jsx';
+import Footer from "./components/Footer.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import PrivacyPage from "./pages/PrivacyPage.jsx";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Terror Apps',
+      title: "Terror Apps",
       headerLinks: [
         {
-          title: 'Home',
-          path: '/',
+          title: "Home",
+          path: "/",
         },
         {
-          title: 'About',
-          path: '/about',
+          title: "About",
+          path: "/about",
         },
         {
-          title: 'Contact',
-          path: '/contact',
+          title: "Contact",
+          path: "/contact",
         },
       ],
       home: {
-        title: 'Terror Apps',
-        subTitle: 'Awesome projects by awesome devs',
-        description: 'See awesome projects below',
+        title: "Terror Apps",
+        subTitle: "Awesome projects by awesome devs",
+        description: "See awesome projects below",
       },
       about: {
-        title: 'About Us',
+        title: "About Us",
       },
       contact: {
-        title: 'Contact Us',
+        title: "Contact Us",
       },
       privacy: {
-        title: 'Terror Apps',
+        title: "Terror Apps",
       },
     };
   }
@@ -77,23 +77,24 @@ class App extends Component {
             </Navbar.Collapse>
           </Navbar>
 
-          <Route
-            path="/"
-            exact
-            render={() => (
+          <Switch>
+            <Route path="/" exact>
               <HomePage
                 title={this.state.home.title}
                 subTitle={this.state.home.subTitle}
                 description={this.state.home.description}
               />
-            )}
-          />
-
-          <Route path="/about" render={() => <AboutPage title={this.state.about.title} />} />
-
-          <Route path="/contact" render={() => <ContactPage title={this.state.contact.title} />} />
-          <Route path="/privacy" render={() => <PrivacyPage title={this.state.privacy.title} />} />
-
+            </Route>
+            <Route path="/about" exact>
+              <AboutPage title={this.state.about.title} />
+            </Route>
+            <Route path="/contact" exact>
+              <ContactPage title={this.state.contact.title} />
+            </Route>
+            <Route path="/privacy" exact>
+              <PrivacyPage title={this.state.privacy.title} />
+            </Route>
+          </Switch>
           <Footer />
         </Container>
       </Router>
