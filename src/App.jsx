@@ -1,36 +1,21 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 // import 'bootstrap/dist/css/bootstrap.css';
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import Container from "react-bootstrap/Container"
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
 
-import Footer from "./components/Footer.jsx";
-import HomePage from "./pages/HomePage.jsx";
-import AboutPage from "./pages/AboutPage.jsx";
-import ContactPage from "./pages/ContactPage.jsx";
-import PrivacyPage from "./pages/PrivacyPage.jsx";
+import Footer from "./components/Footer"
+import HomePage from "./pages/HomePage"
+import AboutPage from "./pages/AboutPage"
+import ContactPage from "./pages/ContactPage"
+import PrivacyPage from "./pages/PrivacyPage"
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      title: "Terror Apps",
-      headerLinks: [
-        {
-          title: "Home",
-          path: "/",
-        },
-        {
-          title: "About",
-          path: "/about",
-        },
-        {
-          title: "Contact",
-          path: "/contact",
-        },
-      ],
       home: {
         title: "Terror Apps",
         subTitle: "Awesome projects by awesome devs",
@@ -45,19 +30,21 @@ class App extends Component {
       privacy: {
         title: "Terror Apps",
       },
-    };
+    }
   }
 
   render() {
+    const { home, about, contact, privacy } = this.state
     return (
-      <Router basename={process.env.PUBLIC_URL}>
-        <Container className="p-0" fluid={true}>
+      <Router>
+        <Container className="p-0" fluid>
           <Navbar expand="lg">
             <Navbar.Brand>
               <Link to="/">
                 <img
                   src="https://res.cloudinary.com/rreyes/image/upload/v1588809670/terror_apps_logo_rprbvp.png"
                   width="100px"
+                  alt="Terror Logo"
                 />
               </Link>
             </Navbar.Brand>
@@ -80,27 +67,23 @@ class App extends Component {
 
           <Switch>
             <Route path="/" exact>
-              <HomePage
-                title={this.state.home.title}
-                subTitle={this.state.home.subTitle}
-                description={this.state.home.description}
-              />
+              <HomePage title={home.title} subTitle={home.subTitle} description={home.description} />
             </Route>
             <Route path="/about" exact>
-              <AboutPage title={this.state.about.title} />
+              <AboutPage title={about.title} />
             </Route>
             <Route path="/contact" exact>
-              <ContactPage title={this.state.contact.title} />
+              <ContactPage title={contact.title} />
             </Route>
             <Route path="/privacy" exact>
-              <PrivacyPage title={this.state.privacy.title} />
+              <PrivacyPage title={privacy.title} />
             </Route>
           </Switch>
           <Footer />
         </Container>
       </Router>
-    );
+    )
   }
 }
 
-export default App;
+export default App

@@ -1,0 +1,103 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
+    "plugin:@typescript-eslint/recommended", // Uses the recommended rules from @typescript-eslint/eslint-plugin
+    "plugin:prettier/recommended", // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    "prettier", // disables react-specific linting rules that conflict with prettier
+    "prettier/flowtype",
+    "prettier/react",
+    "prettier/standard",
+    "prettier/@typescript-eslint"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "React": "writable"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src/"],
+        "moduleDirectory": ["node_modules", "pages/", "components/"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {}
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/ignore": ["node_modules"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react-hooks", "@typescript-eslint", "babel"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "max-len": ["error", 120, { "ignoreUrls": true, "ignoreStrings": true, "ignoreTemplateLiterals": true }],
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "semi": ["error", "never", { "beforeStatementContinuationChars": "always" }],
+    "import/order": [
+      "error",
+      { "newlines-between": "ignore", "groups": ["builtin", "external", "internal", "parent", "sibling", "index"] }
+    ],
+    "import/extensions": "off",
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3
+      }
+    ],
+    "no-unused-vars": ["error", { "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }],
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "react/jsx-one-expression-per-line": ["off"],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": ["off"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts*"],
+      "parser": "@typescript-eslint/parser",
+      "rules": {
+        "react/prop-types": "off",
+        "no-unused-vars": "off",
+        "no-dupe-class-members": "off",
+        "lines-between-class-members": "off",
+        "camelcase": "off"
+      }
+    },
+    {
+      "files": ["**/*.js*", "*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-empty-function": "off"
+      }
+    },
+    {
+      "files": ["*.js*", "*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": 0
+      }
+    }
+  ]
+}

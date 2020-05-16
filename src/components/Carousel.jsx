@@ -1,63 +1,57 @@
-import React, { Component } from 'react';
-import pokervault from '../assets/pokervaultlogo.png';
-import Card from '../components/Card.jsx';
-
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-param-reassign */
+import React, { Component } from "react"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import pokervault from "../assets/pokervaultlogo.png"
+import Card from "./Card.jsx"
 
 class Carousel extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       items: [
         {
           id: 0,
-          title: 'PokerVault',
-          subTitle: 'Poker logging app',
+          title: "PokerVault",
+          subTitle: "Poker logging app",
           imgSrc: pokervault,
-          link: '',
+          link: "",
           selected: false,
         },
       ],
-    };
+    }
   }
 
-  handleCardClick = (id, card) => {
-    let items = [...this.state.items];
-    items[id].selected = items[id].selected ? false : true;
+  handleCardClick = id => {
+    const items = [...this.state.items]
+    items[id].selected = !items[id].selected
 
-    items.forEach((item) => {
+    items.forEach(item => {
       if (item.id !== id) {
-        item.selected = false;
+        item.selected = false
       }
-    });
+    })
 
     this.setState({
       items,
-    });
-  };
+    })
+  }
 
-  makeItems = (items) => {
-    return items.map((item) => {
-      return (
-        <Card
-          item={item}
-          click={(e) => this.handleCardClick(item.id, e)}
-          key={item.id}
-        />
-      );
-    });
-  };
+  makeItems = items => {
+    return items.map(item => {
+      return <Card item={item} click={e => this.handleCardClick(item.id, e)} key={item.id} />
+    })
+  }
 
   render() {
     return (
-      <Container fluid={true}>
-        <Row className="justify-content-around">
-          {this.makeItems(this.state.items)}
-        </Row>
+      <Container fluid>
+        <Row className="justify-content-around">{this.makeItems(this.state.items)}</Row>
       </Container>
-    );
+    )
   }
 }
 
-export default Carousel;
+export default Carousel

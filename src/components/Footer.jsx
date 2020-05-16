@@ -1,13 +1,13 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React from "react"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
     <footer className="mt-5">
-      <Container fluid={true}>
+      <Container fluid>
         <Row className="justify-content-between p-3">
           <Col className="p-0" md={3} sm={12}>
             <Link className="nav-link text-white" to="/privacy">
@@ -20,7 +20,7 @@ const Footer = () => {
         </Row>
       </Container>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
