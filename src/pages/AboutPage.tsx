@@ -1,17 +1,12 @@
 import React from "react"
-import Hero from "components/Hero"
-import Content from "components/Content"
+import Page from "components/Page"
 
-interface AboutPageProps {
-  title: string
-}
-
-const AboutPage: React.FC<AboutPageProps> = ({ title }) => {
+const AboutPage: React.FC = () => {
   return (
-    <div>
-      <Hero title={title} />
-      <Content>Hey there, this is just a filler page for Terror Apps at the moment.</Content>
-    </div>
+    <Page>
+      <h1>About Us</h1>
+      <p>Hey there, this is just a filler page for Terror Apps at the moment.</p>
+    </Page>
   )
 }
 
