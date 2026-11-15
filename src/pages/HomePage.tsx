@@ -45,15 +45,8 @@ const API_STATS = [
   { value: "On request", caption: "API keys are issued by request during early access" },
 ]
 
-const CASE_STUDY_TILES = [
-  { value: "+80%", caption: "sales growth in one year", signal: true },
-  { value: "5", caption: "data sources in one system" },
-  { value: "12", caption: "months of plan, review, revise" },
-]
-
 const fade = (duration: number, delay: number) => ({ animationDuration: `${duration}s`, animationDelay: `${delay}s` })
 
-// "Read the full study" has no destination yet; it renders as a placeholder, as in the design.
 const HomePage: React.FC = () => {
   return (
     <>
@@ -73,8 +66,8 @@ const HomePage: React.FC = () => {
             <Link className="btn btn--primary" to="/#contact">
               Book a demo
             </Link>
-            <Link className="btn btn--secondary" to="/#work">
-              See the case study
+            <Link className="btn btn--secondary" to="/#api">
+              Explore Cardpool
             </Link>
           </div>
         </div>
@@ -164,30 +157,6 @@ const HomePage: React.FC = () => {
               <li key={endpoint}>{endpoint}</li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      <section id="work" className="work">
-        <div className="section split work__inner">
-          <div className="stack work__copy">
-            <span className="eyebrow">Case study</span>
-            <h2 className="title">A plan to increase sales, then increase them again.</h2>
-            <p className="lede">
-              We added a custom inventory system to a TCG store, tracked singles and sealed against events, employee
-              hours, cash flow and card show profit, then built plans on top of the data and kept revising them.
-            </p>
-            <a className="link-strong" href="#">
-              Read the full study →
-            </a>
-          </div>
-          <div className="tiles">
-            {CASE_STUDY_TILES.map(({ value, caption, signal }) => (
-              <div className="tile" key={value}>
-                <strong className={signal ? "tile__value--signal" : undefined}>{value}</strong>
-                <span>{caption}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
