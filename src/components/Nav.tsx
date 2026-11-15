@@ -15,9 +15,6 @@ const Nav: React.FC = () => {
         <Link className="nav__link" to="/#api">
           API
         </Link>
-        <Link className="nav__link" to="/#apps">
-          Apps
-        </Link>
         <Link className="nav__link" to="/#work">
           Work
         </Link>

@@ -187,27 +187,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section id="apps" className="section split apps">
-        <div className="stack apps__copy">
-          <span className="eyebrow">Apps</span>
-          <h2 className="title">We also ship mobile apps.</h2>
-          <p className="lede">
-            iOS and Android, built by the same team that builds the data tooling. AI is part of how we work, from
-            forecasting to the apps themselves.
-          </p>
-        </div>
-        <div className="project">
-          <div className="project__image">app screenshot</div>
-          <div className="project__body">
-            <div className="project__row">
-              <h3>App name</h3>
-              <span className="project__tag">iOS · Android</span>
-            </div>
-            <p>One-line description of the app.</p>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="section section--ruled split contact">
         <div className="stack contact__copy">
           <span className="eyebrow">Contact</span>
