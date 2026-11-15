@@ -32,7 +32,7 @@ const ContactForm: React.FC = () => {
         <input id="contact-email" name="email" type="email" autoComplete="email" required />
       </div>
       <div className="field">
-        <label htmlFor="contact-message">What do you want to track?</label>
+        <label htmlFor="contact-message">What do you need help with?</label>
         <textarea id="contact-message" name="message" rows={4} required />
       </div>
       <div className="form__actions">

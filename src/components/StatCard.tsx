@@ -58,14 +58,8 @@ const StatCard: React.FC = () => {
   const [shown, setShown] = useState<Shown>(() => (reduced ? totals(INITIAL) : { singles: 0, sealed: 0, delta: 0 }))
   const [feedIdx, setFeedIdx] = useState(0)
   const [entered, setEntered] = useState(reduced)
-  const [clock, setClock] = useState(() => new Date().toTimeString().slice(0, 8))
 
   const target = totals(series)
-
-  useEffect(() => {
-    const id = setInterval(() => setClock(new Date().toTimeString().slice(0, 8)), 1000)
-    return () => clearInterval(id)
-  }, [])
 
   useEffect(() => {
     if (reduced) return undefined
@@ -117,14 +111,7 @@ const StatCard: React.FC = () => {
       <div className="live__blob live__blob--primary" />
       <div className="live__card">
         <div className="live__head">
-          <span className="live__title">
-            <span className="live__dot">
-              <span />
-              <span />
-            </span>
-            Singles vs. sealed · live
-          </span>
-          <span className="mono">{clock}</span>
+          <span className="live__title">Sample data · TCG store dashboard</span>
         </div>
 
         <div className="live__stats">

@@ -7,16 +7,16 @@ const AboutPage: React.FC = () => {
     <Page>
       <h1>About Terror</h1>
       <p>
-        Terror LLC is a data company for trading card game stores. We connect a store&apos;s singles and sealed
-        inventory to its events, staff hours and cash flow, then build a plan to grow sales and keep revising it as the
-        numbers come in.
+        Terror LLC builds mobile apps and SaaS products, and helps mid-size businesses plan, build and run custom
+        software.
       </p>
       <p>
-        Behind that work sits Cardpool, our API and data lake of TCG card data, prices, images and metadata. Cardpool is
-        in early access, and API keys are issued on request.
+        A lot of our work has been with trading card game stores, where we connect inventory, events, staff hours and
+        cash flow so a store can see what is working. Cardpool, our API of TCG card data, prices, images and metadata,
+        is one of our products. It is in early access, and API keys are issued on request.
       </p>
       <p>
-        Want to talk about your store or Cardpool? <Link to="/#contact">Get in touch</Link>.
+        Have something you want built? <Link to="/#contact">Get in touch</Link>.
       </p>
     </Page>
   )
