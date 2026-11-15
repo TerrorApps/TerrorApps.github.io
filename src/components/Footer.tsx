@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-// Blog and EULA have no pages yet; they render as placeholders, as in the design.
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
@@ -16,13 +15,11 @@ const Footer: React.FC = () => {
             <Link to="/#api">Cardpool API</Link>
           </div>
           <div className="footer__col">
-            <a href="#">Blog</a>
             <Link to="/about">About</Link>
             <Link to="/#contact">Contact</Link>
           </div>
           <div className="footer__col">
             <Link to="/privacy">Privacy</Link>
-            <a href="#">EULA</a>
           </div>
         </div>
         <span className="footer__copy">© 2026 Terror LLC</span>
