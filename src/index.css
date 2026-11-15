@@ -327,28 +327,6 @@ a:hover {
   gap: 10px;
 }
 
-.live__dot {
-  position: relative;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-}
-
-.live__dot span {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: var(--signal);
-}
-
-.live__dot span:first-child {
-  animation: ring 2s ease-out infinite;
-}
-
-.live__dot span:last-child {
-  animation: pulse 2s ease-in-out infinite;
-}
-
 .live__stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 1fr));

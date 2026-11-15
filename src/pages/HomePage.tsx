@@ -3,22 +3,23 @@ import { Link } from "react-router-dom"
 import StatCard from "components/StatCard"
 import ContactForm from "components/ContactForm"
 
-const TRACKED = [
+const SERVICES = [
   {
-    title: "Singles and sealed",
-    body: "A custom inventory system that tracks what sells, at what margin, and how fast.",
+    title: "Mobile apps",
+    body: "iOS and Android apps, designed and built end to end.",
   },
   {
-    title: "Events",
-    body: "Tournaments and card shows correlated to sales, so you know which to run again.",
+    title: "SaaS products",
+    body: "Software we build, run and sell ourselves, like Cardpool.",
   },
   {
-    title: "Employee hours",
-    body: "Staffing against traffic and revenue, by day and by event.",
+    title: "Consulting",
+    body: "Hands-on help for mid-size businesses: custom tools, data and planning.",
   },
   {
-    title: "Cash flow and margin",
-    body: "Card show profit, added profit margin, and what is left after the buylist.",
+    title: "Trading card game stores",
+    body:
+      "A lot of our work. Inventory, events, staff hours and cash flow in one view, so a store knows what to run again.",
   },
 ]
 
@@ -53,18 +54,19 @@ const HomePage: React.FC = () => {
       <section className="section split hero">
         <div className="stack hero__copy">
           <span className="eyebrow fade-up" style={fade(0.7, 0)}>
-            Inventory intelligence for TCG stores
+            Mobile apps, SaaS and consulting
           </span>
           <h1 className="display fade-up" style={fade(0.8, 0.1)}>
-            Data your store can act on.
+            Software your business runs on.
           </h1>
           <p className="lede fade-up" style={fade(0.8, 0.22)}>
-            We connect singles and sealed inventory to your events, staff hours and cash flow, then build a plan to grow
-            sales and repeat it. Behind it sits Cardpool, our API and data lake of TCG prices, images and metadata.
+            Terror LLC builds mobile apps and SaaS products, and helps mid-size businesses plan, build and run custom
+            software. A lot of our work is with trading card game stores. Cardpool, our API of TCG prices, images and
+            metadata, is one of our products.
           </p>
           <div className="hero__actions fade-up" style={fade(0.8, 0.34)}>
             <Link className="btn btn--primary" to="/#contact">
-              Book a demo
+              Get in touch
             </Link>
             <Link className="btn btn--secondary" to="/#api">
               Explore Cardpool
@@ -74,13 +76,13 @@ const HomePage: React.FC = () => {
         <StatCard />
       </section>
 
-      <section id="data" className="section section--ruled stack" style={{ gap: 40 }}>
+      <section id="services" className="section section--ruled stack" style={{ gap: 40 }}>
         <div className="stack" style={{ gap: 10, maxWidth: "60ch" }}>
-          <span className="eyebrow">What we track</span>
-          <h2 className="title">One view of everything that moves product.</h2>
+          <span className="eyebrow">What we do</span>
+          <h2 className="title">Mobile apps, SaaS and consulting.</h2>
         </div>
         <div className="grid-cards">
-          {TRACKED.map(({ title, body }) => (
+          {SERVICES.map(({ title, body }) => (
             <div className="card" key={title}>
               <h3>{title}</h3>
               <p>{body}</p>
@@ -163,9 +165,9 @@ const HomePage: React.FC = () => {
       <section id="contact" className="section section--ruled split contact">
         <div className="stack contact__copy">
           <span className="eyebrow">Contact</span>
-          <h2 className="title">Tell us about your store.</h2>
+          <h2 className="title">Tell us what you need built.</h2>
           <p className="lede">
-            We&apos;ll look at what you sell, what you run, and where the data is today, then come back with a plan.
+            Tell us what you run, what is slowing you down, and what you want built. We&apos;ll come back with a plan.
           </p>
         </div>
         <ContactForm />

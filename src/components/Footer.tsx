@@ -7,12 +7,12 @@ const Footer: React.FC = () => {
       <div className="footer__inner">
         <div className="footer__brand">
           <span className="wordmark">Terror</span>
-          <span>Data and apps for TCG stores.</span>
+          <span>Mobile apps, SaaS and consulting.</span>
         </div>
         <div className="footer__cols">
           <div className="footer__col">
-            <Link to="/#data">Data</Link>
-            <Link to="/#api">Cardpool API</Link>
+            <Link to="/#services">Services</Link>
+            <Link to="/#api">Cardpool</Link>
           </div>
           <div className="footer__col">
             <Link to="/about">About</Link>

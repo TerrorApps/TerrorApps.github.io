@@ -9,17 +9,17 @@ const Nav: React.FC = () => {
         Terror
       </Link>
       <div className="nav__links">
-        <Link className="nav__link" to="/#data">
-          Data
+        <Link className="nav__link" to="/#services">
+          Services
         </Link>
         <Link className="nav__link" to="/#api">
-          API
+          Cardpool
         </Link>
         <Link className="nav__link" to="/about">
           About
         </Link>
         <Link className="btn btn--primary btn--sm" to="/#contact">
-          Book a demo
+          Get in touch
         </Link>
       </div>
     </nav>
