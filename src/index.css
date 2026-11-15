@@ -634,6 +634,12 @@ a:hover {
   color: #94a29a;
 }
 
+.api__notice {
+  margin: 0;
+  font-size: 13px;
+  color: #94a29a;
+}
+
 .endpoints {
   display: flex;
   flex-wrap: wrap;

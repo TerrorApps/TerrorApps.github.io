@@ -35,10 +35,14 @@ const ENDPOINTS = [
 ]
 
 const API_STATS = [
-  { value: "29", caption: "trading card games, including Pokémon, Magic, One Piece, Riftbound and Gundam", mint: true },
-  { value: "Hourly", caption: "price refresh, with daily history back to 2023" },
+  {
+    value: "5",
+    caption: "games to start: One Piece, Pokémon, Magic, Riftbound and Gundam, with more on the way",
+    mint: true,
+  },
   { value: "4", caption: "data tiers: metadata, market prices, per-condition SKUs, realized sales signals" },
-  { value: "Free", caption: "tier with 1,000 requests a day; paid plans from $19/mo" },
+  { value: "Free", caption: "tier planned at 1,000 requests a day, with paid plans from $19/mo" },
+  { value: "On request", caption: "API keys are issued by request during early access" },
 ]
 
 const CASE_STUDY_TILES = [
@@ -49,7 +53,7 @@ const CASE_STUDY_TILES = [
 
 const fade = (duration: number, delay: number) => ({ animationDuration: `${duration}s`, animationDelay: `${delay}s` })
 
-// "Read the docs" and "Read the full study" have no destination yet; they render as placeholders, as in the design.
+// "Read the full study" has no destination yet; it renders as a placeholder, as in the design.
 const HomePage: React.FC = () => {
   return (
     <>
@@ -97,18 +101,16 @@ const HomePage: React.FC = () => {
           <div className="split api__top">
             <div className="stack api__copy">
               <span className="eyebrow">Cardpool · API &amp; data lake</span>
-              <h2 className="title">Years of TCG market data, one API key away.</h2>
+              <h2 className="title">TCG market data, one API key away.</h2>
               <p className="lede">
-                Card and set metadata, images, market prices, per-condition SKU pricing and realized sales signals
-                across 29 trading card games. Served from the edge, refreshed hourly.
+                Card and set metadata, images, market prices, per-condition SKU pricing and realized sales signals for
+                One Piece, Pokémon, Magic, Riftbound and Gundam, with more games on the way. Cardpool is in early
+                access.
               </p>
               <div className="hero__actions">
                 <Link className="btn btn--mint" to="/#contact">
-                  Get an API key
+                  Request an API key
                 </Link>
-                <a className="btn btn--outline-dark" href="#">
-                  Read the docs
-                </a>
               </div>
             </div>
             <div className="code">
@@ -154,6 +156,8 @@ const HomePage: React.FC = () => {
               </div>
             ))}
           </div>
+
+          <p className="api__notice">This product uses TCGplayer data but is not endorsed or certified by TCGplayer.</p>
 
           <ul className="endpoints">
             {ENDPOINTS.map(endpoint => (
